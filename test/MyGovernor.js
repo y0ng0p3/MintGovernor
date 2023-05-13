@@ -95,7 +95,7 @@ describe("MyGovernor", function () {
 
         const balance = await token.balanceOf(owner.address);
         assert.equal(balance.toString(), parseEther("35000").toString());
-      });
+      })
     });
   });
 });
