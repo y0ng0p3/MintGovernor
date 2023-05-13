@@ -3,7 +3,7 @@ const { assert } = require("chai");
 const { ethers } = require("hardhat");
 const { toUtf8Bytes, keccak256, parseEther } = ethers.utils;
 
-describe("MyGovernor", function () {
+describe("Vovernor", function () {
   async function deployFixture() {
     const [owner, otherAccount] = await ethers.getSigners();
 
@@ -15,11 +15,11 @@ describe("MyGovernor", function () {
       nonce: transactionCount + 1
     });
 
-    const MyGovernor = await ethers.getContractFactory("MyGovernor");
-    const governor = await MyGovernor.deploy(futureAddress);
+    const Vovernor = await ethers.getContractFactory("Vovernor");
+    const governor = await Vovernor.deploy(futureAddress);
 
-    const MyToken = await ethers.getContractFactory("MyToken");
-    const token = await MyToken.deploy(governor.address);
+    const Voken = await ethers.getContractFactory("Voken");
+    const token = await Voken.deploy(governor.address);
 
     await token.delegate(owner.address);
 
