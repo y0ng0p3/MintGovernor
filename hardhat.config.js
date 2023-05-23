@@ -7,7 +7,11 @@ module.exports = {
   networks: {
     goerli: {
       url: process.env.ALCHEMY_GOERLI_URL,
-      accounts: [process.env.GOERLI_PRIVATE_KEY]
+      accounts: [process.env.PRIVATE_KEY]
+    },
+    sepolia: {
+      url: process.env.ALCHEMY_SEPOLIA_URL,
+      accounts: [process.env.PRIVATE_KEY]
     }
   }
 };
